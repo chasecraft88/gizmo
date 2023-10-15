@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChaseCraft Universe Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #0a0a0a;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #space {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .stars {
+      width: 1px;
+      height: 1px;
+      background: #ffffff;
+      position: absolute;
+    }
+
+    .portfolio {
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .portfolio h1 {
+      font-size: 36px;
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .portfolio-item {
+      margin: 20px 0;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+
+    .portfolio-item h3 {
+      font-size: 24px;
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    .portfolio-item p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio {
+        max-width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="space"></div>
+  <div class="portfolio">
+    <h1>ChaseCraft Universe Portfolio</h1>
+    <div class="portfolio-item">
+      <h3>Game 1: Space Chase</h3>
+      <p>Space Chase is an intergalactic adventure where you navigate through wormholes and defeat cosmic threats.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Game 2: Stellar Odyssey</h3>
+      <p>Stellar Odyssey is a space exploration game with stunning visuals and an expansive galaxy to conquer.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Game 3: Nebula Quest</h3>
+      <p>Nebula Quest is a journey through surreal nebulae, solving mysteries and unlocking the secrets of the universe.</p>
+    </div>
+  </div>
+  <script>
+    // Create a space-themed background with stars
+    const space = document.getElementById('space');
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'stars';
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.animation = `twinkle ${Math.random() * 3 + 1}s linear infinite`;
+      space.appendChild(star);
+    }
+  </script>
+</body>
+</html>
