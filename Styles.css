@@ -1,0 +1,69 @@
+body {
+  background-color: #000;
+  font-family: 'Courier New', monospace;
+}
+
+.matrix {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: matrix-move 1s infinite linear;
+  background-color: #000; /* Change the background color to match the body background */
+}
+
+.matrix-text {
+  color: #00ff00; /* Green color for letters */
+  font-size: 20px;
+}
+
+@keyframes matrix-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+.portfolio {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+.portfolio-item-container {
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.portfolio-item h3 {
+  font-size: 24px;
+}
+
+.portfolio-item p {
+  color: gray;
+}
+
+@media (max-width: 250px) {
+  /* Adjust styles for smaller screens (e.g., mobile devices) */
+  .portfolio {
+    max-width: 90%;
+  }
+
+  .portfolio-item-container {
+    margin-bottom: 10px;
+  }
+}
